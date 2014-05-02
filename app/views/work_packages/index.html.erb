@@ -1,0 +1,23 @@
+<h1>Listing work_packages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @work_packages.each do |work_package| %>
+      <tr>
+        <td><%= link_to 'Show', work_package %></td>
+        <td><%= link_to 'Edit', edit_work_package_path(work_package) %></td>
+        <td><%= link_to 'Destroy', work_package, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Work package', new_work_package_path %>
